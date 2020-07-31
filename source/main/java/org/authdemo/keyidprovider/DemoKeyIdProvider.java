@@ -32,7 +32,7 @@ public class DemoKeyIdProvider implements KeyStoreKeyIdProvider {
     @Override
     public String getKeyId(KeyUse keyUse, String alias, PublicKey publicKey, Optional<Certificate> certificate) {
 
-        return ThumbprintUtils.getThumbprintFromKey(publicKey);
+        return ThumbprintUtils.getRfc7638ThumbprintFromKey(publicKey);
     }
 }
 
