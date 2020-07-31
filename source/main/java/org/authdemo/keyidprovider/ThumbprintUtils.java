@@ -13,8 +13,8 @@ import java.security.MessageDigest;
 import static java.nio.charset.StandardCharsets.UTF_8;
 import java.util.Arrays;
 
-public class Rfc7638Thumbprint {
-    static String getThumbprintFromKey(PublicKey publicKey){
+public class ThumbprintUtils {
+    static String getRfc7638ThumbprintFromKey(PublicKey publicKey){
 
         String thumbprint = null;
 
