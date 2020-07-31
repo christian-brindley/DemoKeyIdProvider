@@ -28,7 +28,7 @@ import org.forgerock.json.jose.jwk.KeyUse;
  * Provides rfc7638 compliant key ids built from SHA1 hash of JWK thumbprint
  */
 
-public class ThumbprintKeyStoreKeyIdProvider implements KeyStoreKeyIdProvider {
+public class DemoKeyIdProvider implements KeyStoreKeyIdProvider {
     @Override
     public String getKeyId(KeyUse keyUse, String alias, PublicKey publicKey, Optional<Certificate> certificate) {
 
