@@ -54,15 +54,13 @@ cd DemoKeyIDProvider
 mvn clean install
 ```
 
-Maven builds the binary in `./target/`. The file name format is `openam-thumbprint-keystorekeyidprovider-1.0-SNAPSHOT.jar`  
+Maven builds the binary in `./target/`. The file name format is `am-demokeyidprovider-1.0.jar`  
 
 
 ### Adding the library to OpenAM war
 
-+ Download and unzip the OpenAM.war from ForgeRock backstage:
-
++ Download and unzip the OpenAM.war from ForgeRock backstage: https://backstage.forgerock.com/downloads/browse/am/latest
 ```
-https://backstage.forgerock.com/downloads/browse/am/latest
 $ mkdir ROOT && CD ROOT
 $ jar -xf ~/Downloads/AM-6.5.2.war
 ```
@@ -70,7 +68,7 @@ $ jar -xf ~/Downloads/AM-6.5.2.war
 + Copy the newly generated jar file to /ROOT/WEB-INF/lib folder
 
 ```
-$ cp ../target/openam-thumbprint-keystorekeyidprovider-1.0-SNAPSHOT.jar WEB-INF/lib
+$ cp ../target/am-demokeyidprovider-1.0.jar WEB-INF/lib
 ```
 
 + Rebuild the war file: 
@@ -85,4 +83,4 @@ Deploy the updated WAR file, and follow the instructions to configure AM to use 
 
   https://backstage.forgerock.com/docs/am/6.5/oidc1-guide/#customizing-kids
 
-In brief, this involves setting the advanced server property ```org.forgerock.openam.secrets.keystore.keyid.provider``` to ```org.forgerock.openam.examples.ThumbprintKeyStoreKeyIdProvider```
+In brief, this involves setting the server advanced property ```org.forgerock.openam.secrets.keystore.keyid.provider``` to ```org.authdemo.keyidprovider.DemoKeyIdProvider```
