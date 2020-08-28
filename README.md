@@ -1,13 +1,13 @@
 # ForgeRock Access Management - Demo Key ID Provider
 
-# Disclaimer
+## Disclaimer
 The sample code described herein is provided on an "as is" basis, without warranty of any kind, to the fullest extent permitted by law. ForgeRock does not warrant or guarantee the individual success developers may have in implementing the sample code on their development platforms or in production configurations.
 <br><br>
 ForgeRock does not warrant, guarantee or make any representations regarding the use, results of use, accuracy, timeliness or completeness of any data or information relating to the sample code. ForgeRock disclaims all warranties, expressed or implied, and in particular, disclaims all warranties of merchantability, and warranties related to the code, or any service or software related thereto.
 <br><br>
 ForgeRock shall not be liable for any direct, indirect or consequential damages or costs of any type arising out of any action taken by you or others related to the sample code.
 
-# Introduction
+## Introduction
 
 By default, AM generates a key ID (kid) for each public key exposed in the jwk_uri URI when AM is configured as an OAuth 2.0 authorization server.
 
@@ -66,7 +66,7 @@ mvn clean install
 Maven builds the binary in `./target/`. The file name format is `am-demokeyidprovider-1.0.jar`  
 
 
-### Adding the library to OpenAM war
+## Adding the library to OpenAM war
 
 + Download and unzip the OpenAM.war from ForgeRock backstage: https://backstage.forgerock.com/downloads/browse/am/latest
 ```
@@ -86,7 +86,7 @@ $ cp ../target/am-demokeyidprovider-1.0.jar WEB-INF/lib
 $ jar -cf ../ROOT.war *
 ```
 
-### Installing the key id provider
+## Configuring the key id provider
 
 Deploy the updated WAR file, and follow the instructions to configure AM to use the new key id provider
 
